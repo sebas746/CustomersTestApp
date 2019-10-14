@@ -23,6 +23,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApi.Domain.Entities", ".
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApi.DAC.DataAccess", "..\WebApi.DAC.DataAccess\WebApi.DAC.DataAccess.csproj", "{2151ED9F-65B7-4A34-A93F-F9A0AB64939B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApi.Domain.Interfaces", "..\WebApi.Domain.Interfaces\WebApi.Domain.Interfaces.csproj", "{6DBBD58F-C931-4B5D-A194-6677F4DFD4A1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -49,6 +51,10 @@ Global
 		{2151ED9F-65B7-4A34-A93F-F9A0AB64939B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2151ED9F-65B7-4A34-A93F-F9A0AB64939B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2151ED9F-65B7-4A34-A93F-F9A0AB64939B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6DBBD58F-C931-4B5D-A194-6677F4DFD4A1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6DBBD58F-C931-4B5D-A194-6677F4DFD4A1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6DBBD58F-C931-4B5D-A194-6677F4DFD4A1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6DBBD58F-C931-4B5D-A194-6677F4DFD4A1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -59,6 +65,7 @@ Global
 		{CCB3E3CC-6729-413A-A01E-13FCD79316F5} = {4C4CDABD-0BF5-4223-A276-EA97C9852BA4}
 		{7B58DC93-1127-4549-B20E-03D6F8EA15BD} = {4C4CDABD-0BF5-4223-A276-EA97C9852BA4}
 		{2151ED9F-65B7-4A34-A93F-F9A0AB64939B} = {B7D7147D-A254-4670-BB63-372DAEEA4870}
+		{6DBBD58F-C931-4B5D-A194-6677F4DFD4A1} = {4C4CDABD-0BF5-4223-A276-EA97C9852BA4}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {B3B10A60-8C17-4D5D-B255-95F98AB3A729}
