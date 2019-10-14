@@ -1,0 +1,21 @@
+<div>
+    <div *ngIf="customers?.length > 0; else nodata">
+        <table id="tableResultados" class="table">
+            <thead>
+                <tr>
+                    <th scope="col">Nit</th>
+                    <th scope="col">Full Name</th>                  
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let customer of customers">
+                    <td>{{ customer.nit }}</td>
+                    <td>{{ customer.fullName }}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+<ng-template #nodata>
+    <h4 class="m-1">Waiting for data...</h4>
+</ng-template>
