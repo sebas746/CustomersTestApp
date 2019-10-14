@@ -6,19 +6,19 @@
     public class UnitOfWork : IUnitOfWork
     {
         private WebApiDataContext _dbContext;
-        private BaseRepository<Customers> _customers;
+        private BaseRepository<Customer> _customers;
 
         public UnitOfWork(WebApiDataContext dbContext)
         {
             _dbContext = dbContext;
         }
 
-        public IRepository<Customers> Customers
+        public IRepository<Customer> Customers
         {
             get
             {
                 return _customers ??
-                    (_customers = new BaseRepository<Customers>(_dbContext));
+                    (_customers = new BaseRepository<Customer>(_dbContext));
             }
         }
         public void Commit()

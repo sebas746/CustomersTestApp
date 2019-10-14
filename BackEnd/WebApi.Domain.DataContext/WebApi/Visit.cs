@@ -1,12 +1,11 @@
 ﻿namespace WebApi.Domain.DataContext.WebApi
 {
-    using System;
+    using System;    
     using System.ComponentModel.DataAnnotations;
-
-    public class Customers
+    public class Visit
     {
         [Key]
-        public int Id { get; set; }
+        public int VisitId { get; set; }
 
         [StringLength(50)]
         public string Nit { get; set; }
@@ -14,10 +13,8 @@
         [StringLength(60)]
         public string FullName { get; set; }
 
-        [StringLength(50)]
-        public string Address { get; set; }
+        public DateTime VisitDate { get; set; }
 
-        [StringLength(50)]
-        public string Phone { get; set; }
+        public virtual SalesRepresentative SalesRepresentative { get; set; }
     }
 }

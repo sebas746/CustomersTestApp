@@ -50,14 +50,28 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Migrations\201910142323098_ContextMigration.cs" />
+    <Compile Include="Migrations\201910142323098_ContextMigration.Designer.cs">
+      <DependentUpon>201910142323098_ContextMigration.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="WebApi\Customers.cs" />
+    <Compile Include="WebApi\City.cs" />
+    <Compile Include="WebApi\Country.cs" />
+    <Compile Include="WebApi\Customer.cs" />
+    <Compile Include="WebApi\SalesRepresentative.cs" />
+    <Compile Include="WebApi\State.cs" />
+    <Compile Include="WebApi\Visit.cs" />
     <Compile Include="WebApi\WebApiDataContext.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201910142323098_ContextMigration.resx">
+      <DependentUpon>201910142323098_ContextMigration.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

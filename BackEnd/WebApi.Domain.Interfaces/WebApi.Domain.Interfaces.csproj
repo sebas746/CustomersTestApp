@@ -42,7 +42,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DAC\IRepository.cs" />
+    <Compile Include="DAC\IUnitOfWork.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\WebApi.Domain.DataContext\WebApi.Domain.DataContext.csproj">
+      <Project>{CCB3E3CC-6729-413A-A01E-13FCD79316F5}</Project>
+      <Name>WebApi.Domain.DataContext</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
