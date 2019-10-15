@@ -15,6 +15,8 @@
 
         public long VisitTotal { get; set; }
 
+        public int CityId { get; set; }
+
         [StringLength(1000)]
         public string Description { get; set; }
     }

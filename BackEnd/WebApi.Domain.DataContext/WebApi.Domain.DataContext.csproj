@@ -58,6 +58,10 @@
     <Compile Include="Migrations\201910150222534_MigrationContext2.Designer.cs">
       <DependentUpon>201910150222534_MigrationContext2.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201910151602124_Context3.cs" />
+    <Compile Include="Migrations\201910151602124_Context3.Designer.cs">
+      <DependentUpon>201910151602124_Context3.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="WebApi\City.cs" />
@@ -78,6 +82,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201910150222534_MigrationContext2.resx">
       <DependentUpon>201910150222534_MigrationContext2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201910151602124_Context3.resx">
+      <DependentUpon>201910151602124_Context3.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

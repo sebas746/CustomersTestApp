@@ -11,13 +11,15 @@ import { CustomerListComponent } from './customer/customer-list/customer-list.co
 import { CreateCustomerComponent } from './customer/create-customer/create-customer.component';
 import { AngularFontAwesomeModule } from 'angular-font-awesome';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { StatisticsListComponent } from './statistics/statistics-list/statistics-list.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavMenuComponent,
     CustomerListComponent,
-    CreateCustomerComponent
+    CreateCustomerComponent,
+    StatisticsListComponent
   ],
   imports: [
     BrowserModule,
