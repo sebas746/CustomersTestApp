@@ -10,6 +10,7 @@ namespace WebApi.DAC.DataAccess
         private BaseRepository<City> _cities;
         private BaseRepository<State> _states;
         private BaseRepository<Country> _countries;
+        private BaseRepository<Visit> _visits;
 
         public UnitOfWork(WebApiDataContext dbContext)
         {
@@ -49,6 +50,15 @@ namespace WebApi.DAC.DataAccess
             {
                 return _countries ??
                     (_countries = new BaseRepository<Country>(_dbContext));
+            }
+        }
+
+        public IRepository<Visit> Visits
+        {
+            get
+            {
+                return _visits ??
+                    (_visits = new BaseRepository<Visit>(_dbContext));
             }
         }
 
