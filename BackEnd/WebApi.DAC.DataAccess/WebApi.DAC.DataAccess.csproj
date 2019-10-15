@@ -51,10 +51,9 @@
     <Compile Include="BaseRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UnitOfWork.cs" />
+    <Compile Include="WebApi\GeographyDAC.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="WebApi\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <ProjectReference Include="..\WebApi.Domain.DataContext\WebApi.Domain.DataContext.csproj">
       <Project>{CCB3E3CC-6729-413A-A01E-13FCD79316F5}</Project>

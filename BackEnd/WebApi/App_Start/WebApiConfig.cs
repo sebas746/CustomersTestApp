@@ -6,7 +6,12 @@ using System.Web.Http.Cors;
 using Unity;
 using WebApi.App_Start;
 using WebApi.DAC.DataAccess;
+using WebApi.DAC.DataAccess.WebApi;
 using WebApi.Domain.Interfaces.DAC;
+using WebApi.Domain.Interfaces.Geography;
+using WebApi.Domain.Interfaces.Service;
+using WebApi.Services.Geography;
+using WebApi.Services.WebApi;
 
 namespace WebApi
 {
@@ -17,7 +22,10 @@ namespace WebApi
             // Web API configuration and services
 
             // Web API configuration and services
-            var container = new UnityContainer();           
+            var container = new UnityContainer();
+            container.RegisterType<IGeographyService, GeographyService>();
+            container.RegisterType<ICustomerService, CustomerService>();
+            container.RegisterType<IGeographyDAC, GeographyDAC>();
             container.RegisterType(typeof(IRepository<>), typeof(BaseRepository<>));
             container.RegisterType<IUnitOfWork, UnitOfWork>();
             config.DependencyResolver = new UnityResolver(container);

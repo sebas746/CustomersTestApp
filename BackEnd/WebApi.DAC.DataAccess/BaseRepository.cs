@@ -1,13 +1,13 @@
-﻿namespace WebApi.DAC.DataAccess
-{
-    using System;
-    using System.Collections.Generic;
-    using System.Data.Entity;
-    using System.Linq;
-    using System.Linq.Expressions;
-    using WebApi.Domain.DataContext.WebApi;
-    using WebApi.Domain.Interfaces.DAC;
+﻿using System;
+using System.Collections.Generic;
+using System.Data.Entity;
+using System.Linq;
+using System.Linq.Expressions;
+using WebApi.Domain.DataContext.WebApi;
+using WebApi.Domain.Interfaces.DAC;
 
+namespace WebApi.DAC.DataAccess
+{
     public class BaseRepository<TEntity> : IRepository<TEntity> where TEntity : class
     {
         internal WebApiDataContext context;

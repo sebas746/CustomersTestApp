@@ -32,6 +32,6 @@
 
         public int VisitsPercentaje { get; set; }
 
-        public virtual List<Visit> Visits { get; set; }
+        public List<Visit> Visits { get; set; }
     }
 }

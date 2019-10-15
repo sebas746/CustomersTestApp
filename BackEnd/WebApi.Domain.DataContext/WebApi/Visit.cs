@@ -7,14 +7,15 @@
         [Key]
         public int VisitId { get; set; }
 
-        [StringLength(50)]
-        public string Nit { get; set; }
-
-        [StringLength(60)]
-        public string FullName { get; set; }
-
         public DateTime VisitDate { get; set; }
 
         public virtual SalesRepresentative SalesRepresentative { get; set; }
+
+        public int VisitNet { get; set; }
+
+        public long VisitTotal { get; set; }
+
+        [StringLength(1000)]
+        public string Description { get; set; }
     }
 }
