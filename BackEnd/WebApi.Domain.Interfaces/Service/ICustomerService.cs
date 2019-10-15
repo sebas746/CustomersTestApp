@@ -11,5 +11,7 @@ namespace WebApi.Domain.Interfaces.Service
     {
         Customer GetCustomer(int id);
         IEnumerable<Customer> GetCustomer();
+
+        int CreateCustomer(Customer customer);
     }
 }

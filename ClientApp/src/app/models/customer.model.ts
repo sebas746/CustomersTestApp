@@ -3,9 +3,11 @@ export class Customer {
         public nit?: number,
         public fullName?: string,
         public address?: string,
-        public phone?: string,
-        public city?: string,
+        public phone?: string,       
         public state?: string,
-        public country?: string,
+        public countryId?: number,
+        public stateId?: number,
+        public cityId?: number,
+        public creditLimit?: number
     ) {}
 }

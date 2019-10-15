@@ -34,8 +34,10 @@ namespace WebApi.Controllers
 
         // POST api/values
         [HttpPost]
-        public void Post([FromBody]string value)
+        public IHttpActionResult Post([FromBody]Customer customer)
         {
+            var result = customerService.CreateCustomer(customer);
+            return Ok(result);
         }
 
         // PUT api/values/5

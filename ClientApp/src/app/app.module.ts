@@ -8,12 +8,16 @@ import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { NavMenuComponent } from './nav-menu/nav-menu.component';
 import { CustomerListComponent } from './customer/customer-list/customer-list.component';
+import { CreateCustomerComponent } from './customer/create-customer/create-customer.component';
+import { AngularFontAwesomeModule } from 'angular-font-awesome';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavMenuComponent,
-    CustomerListComponent
+    CustomerListComponent,
+    CreateCustomerComponent
   ],
   imports: [
     BrowserModule,
@@ -21,7 +25,9 @@ import { CustomerListComponent } from './customer/customer-list/customer-list.co
     FormsModule,
     ReactiveFormsModule,
     NgSelectModule,
-    HttpClientModule
+    HttpClientModule,
+    AngularFontAwesomeModule,
+    FontAwesomeModule
   ],
   providers: [],
   bootstrap: [AppComponent]

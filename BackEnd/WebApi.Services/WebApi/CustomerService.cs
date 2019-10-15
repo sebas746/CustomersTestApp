@@ -11,18 +11,18 @@ namespace WebApi.Services.WebApi
 {
     public class CustomerService : ICustomerService
     {
-        private IUnitOfWork unitOfWork;
+        private IUnitOfWork repo;
 
         public CustomerService(IUnitOfWork unitOfWork)
         {   
-            this.unitOfWork = unitOfWork;
+            this.repo = unitOfWork;
         }
 
         public IEnumerable<Customer> GetCustomer()
         {
             try
             {
-                return unitOfWork.Customers.Get();
+                return repo.Customers.Get();
             }
             catch (Exception exc)
             {
@@ -34,7 +34,7 @@ namespace WebApi.Services.WebApi
         {
             try
             {
-                return unitOfWork.Customers.Get(c => c.CustomerId.Equals(id)).FirstOrDefault();
+                return repo.Customers.Get(c => c.CustomerId.Equals(id)).FirstOrDefault();
             }
             catch (Exception exc)
             {
@@ -42,6 +42,20 @@ namespace WebApi.Services.WebApi
             }
         }
 
-        
+        public int CreateCustomer(Customer customer)
+        {
+            try
+            {
+                customer.AvailableCredit = customer.CreditLimit;
+                repo.Customers.Insert(customer);
+                repo.Commit();
+                return 1;
+            }
+            catch (Exception exc)
+            {
+                throw exc;
+            }
+        }
+
     }
 }
